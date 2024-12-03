@@ -18,4 +18,12 @@ public class AtletaDAO {
     public void atualizar(Atleta atleta){
         this.em.merge(atleta);
     }
+
+    public Atleta listar(Long id){
+        return em.find(Atleta.class, id);
+    }
+    public void deletar(Atleta atleta){
+        atleta = this.em.merge(atleta);
+        this.em.remove(atleta);
+    }
 }

@@ -25,15 +25,18 @@ public class Main {
         AtletaDAO atletaDao = new AtletaDAO(em);
 
         em.getTransaction().begin();
+        cidadeDao.cadastrar(alagoas);
         //cidadeDao.cadastrar(alagoas);
         //cidadeDao.cadastrar(catimbau);
         atletaDao.cadastrar(atleta);
-        //em.getTransaction().commit();
         em.flush();
         em.clear();
 
         atletaDao.atualizar(atleta);
+
         atleta.setNome("Roberto");
+        em.flush();
+        atletaDao.deletar(atleta);
         em.flush();
     }
 
