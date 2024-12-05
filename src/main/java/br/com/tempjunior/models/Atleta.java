@@ -93,4 +93,18 @@ public class Atleta {
     public void setMelhorTempo(double melhorTempo) {
         this.melhorTempo = melhorTempo;
     }
+
+    @Override
+    public String toString() {
+        return "Atleta{" +
+                "carteiraDeCadastro=" + carteiraDeCadastro +
+                ", nome='" + nome + '\'' +
+                ", pais=" + pais +
+                ", sexo=" + sexo +
+                ", idade=" + idade +
+                ", melhorTempo=" + melhorTempo +
+                ", DATACADASTRO=" + DATACADASTRO +
+                ", cidade=" + cidade +
+                '}';
+    }
 }
